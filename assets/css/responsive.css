@@ -1,0 +1,118 @@
+@media screen and (max-width:1203px) {
+     :root {
+        --height-header-navbar: 0px;
+        --height-header: 55px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .show-on-mobile-tablet {
+        display: block;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    }
+    .header__cart {
+        width: 80px;
+    }
+    .container {
+        padding-top: calc(var(--height-header) + 40px);
+    }
+    .home-product {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .header__cart-list {
+        position: fixed;
+        top: var(--height-header);
+        width: 100%;
+        left: 0;
+    }
+    .header__cart-list::before {
+        border: none;
+        display: block;
+        top: -20px;
+        left: 0;
+        right: 0;
+        height: 20px;
+        background-color: transparent;
+    }
+    .header__cart-item-delete--mobile-tablet {
+        display: block;
+    }
+    .header__cart-item-delete--desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1023px) and (min-width:768px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__logo {
+        margin-right: 8px;
+    }
+    .header__logo,
+    .header__logo-img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header__with-search {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:767px) and (min-width:450px) {
+    .hide-on-mobile-lagre {
+        display: none;
+    }
+}
+
+@media screen and (max-width:449px) {
+    .hide-on-mobile-small {
+        display: none;
+    }
+    .show-on-mobile-small {
+        display: block;
+    }
+    .header__with-search {
+        margin: 0;
+    }
+    .header__logo {
+        width: 150px;
+    }
+    .header__cart-item-price {
+        display: none;
+    }
+    .footer__about-contact {
+        text-align: center;
+    }
+    .footer__item-link,
+    .footer__item-app-qr {
+        justify-content: center;
+    }
+    .footer__terms-item {
+        padding: 0 10px;
+    }
+    .pagination-item__link {
+        margin: 0 4px;
+    }
+    .footer__certification-list {
+        flex-direction: column;
+        height: 140px;
+    }
+    .header__search {
+        display: none;
+    }
+}
