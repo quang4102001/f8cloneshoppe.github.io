@@ -1,3 +1,7 @@
+.app {
+    overflow: hidden;
+}
+
 .header {
     height: var(--height-header);
     background-image: linear-gradient(to right bottom, #f53e2d, #fe6433);
@@ -512,14 +516,15 @@ ul input[name="check"] {
 /* header__navbar-search-mobile-small */
 
 .header__navbar-search-mobile-small {
-    display: flex;
+    display: none;
     align-items: center;
     padding: 16px;
 }
 
-.header__navbar-mobile-small {
+
+/* .header__navbar-mobile-small {
     display: none;
-}
+} */
 
 #header__navbar-mobile-small__check {
     display: none;
@@ -606,6 +611,11 @@ ul input[name="check"] {
 .header__navbar-mobile-small__item--active a {
     color: var(--primary-color);
 }
+
+
+/* .header__search-mobile-small {
+    display: none;
+} */
 
 #header__search-mobile-small__check {
     display: none;
@@ -847,6 +857,7 @@ ul input[name="check"] {
     display: inline-block;
     position: relative;
     height: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart>span:hover .header__cart-list,
@@ -1065,6 +1076,23 @@ ul input[name="check"] {
     justify-content: center;
     align-items: center;
     position: relative;
+    font-weight: 300;
+}
+
+.home-sort__tablet-mobile__item--active {
+    color: var(--primary-color);
+    position: relative;
+}
+
+.home-sort__tablet-mobile__item--active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
 }
 
 .home-sort__tablet-mobile__item::after {
@@ -1073,18 +1101,19 @@ ul input[name="check"] {
     position: absolute;
     right: 0;
     width: 1px;
-    height: 50%;
-    background-color: var(--text-color);
+    height: 1.4rem;
+    background-color: #ccc;
 }
 
 .home-sort__tablet-mobile__item--price::after {
     display: none;
 }
 
-.home-sort__tablet-mobile__item:hover,
+
+/* .home-sort__tablet-mobile__item:hover,
 .home-sort__tablet-mobile__item:active {
     font-weight: 600;
-}
+} */
 
 
 /* container */
@@ -1092,7 +1121,7 @@ ul input[name="check"] {
 .container {
     background-color: #f5f5f5;
     padding-top: 32px;
-    display: flex;
+    /* display: flex; */
 }
 
 .container__wrap {
@@ -1246,6 +1275,56 @@ ul input[name="check"] {
 
 .home-sort__page-move--active:hover {
     background-color: rgb(252, 252, 252);
+}
+
+
+/* category-tablet-mobile */
+
+.category-mobile-tablet {
+    display: none;
+    padding: 8px;
+}
+
+.category-mobile-tablet__list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.category-mobile-tablet__item:nth-of-type(3n + 1) .category-mobile-tablet__link {
+    background-color: #89b3e4;
+}
+
+.category-mobile-tablet__item:nth-of-type(3n - 1) .category-mobile-tablet__link {
+    background-color: #7bc2b6;
+}
+
+.category-mobile-tablet__item:nth-of-type(3n) .category-mobile-tablet__link {
+    background-color: #8cc876;
+}
+
+.category-mobile-tablet__item {
+    width: 110px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.category-mobile-tablet__link {
+    display: block;
+    line-height: 2rem;
+    height: calc(4rem + 4px);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: var(--white-color);
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px 6px 2px;
+    font-weight: 300;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 
